@@ -22,6 +22,11 @@ for ($i = 0; $i < 10; $i++) {
     ];
 }
 
-// CSV出力
-$writer = League\Csv\Writer::createFromFileObject(new SplTempFileObject());
-echo $writer->insertAll($data);
+// CSV出力する
+$fp = fopen('faker-sample5.csv', 'w');
+
+foreach ($data as $fields) {
+    fputcsv($fp, $fields);
+}
+
+fclose($fp);
