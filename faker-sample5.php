@@ -1,5 +1,5 @@
 <?php
-// CSV出力
+// faker-sample5.csv
 require_once 'vendor/autoload.php';
 
 $faker = Faker\Factory::create('ja_JP');
